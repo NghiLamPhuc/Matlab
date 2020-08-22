@@ -1,0 +1,21 @@
+rem(a,b) : a-b.*fix(a./b)
+mod(a,b) : a-b.*floor(a./b)
+fix: lam tron ve 0
+################
+;
+Tao array hoac khong in output ra command hoac chia cac lenh cung mot dong.
+A = [1,2; 3,4] : tao ra do`ng moi.
+1 2
+3 4
+################
+Asterisk *
+dai dien chuoi ki tu nao do... file*.m
+################
+Function handles
+A = randi(3,4);
+B = A(:)
+B la vector 1 column
+
+A = rand(3,4);
+A(:) = 1:12
+Thay doi gia tri cua A nhung van giu 3 dong 4 cot
