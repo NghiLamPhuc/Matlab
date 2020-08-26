@@ -59,29 +59,62 @@ end
 
 %% vd trang 9/31
 % diem = input('Nhap diem: ');
-% if (diem>10)|(diem<0) disp('diem khong hop le')
-% elseif diem<=4 disp('Yeu');
-% elseif diem<=6 disp('Trung binh');
-% elseif diem<=8 disp('Kha');
-% else disp('Gioi')
+% if mod(diem,1)==0
+%     if diem >= 0 & diem <= 4 disp('Loai yeu')
+%     elseif diem <= 6 disp('Loai trung binh')
+%     elseif diem <= 8 disp('Loai kha')
+%     elseif diem <= 10 disp('Loai gioi')
+%     else disp('Diem khong hop le')
+%     end
+% else
+%     disp('Diem phai la so nguyen')
 % end
 
-% ketqua = '';
-% if (diem>10)|(diem<0) ketqua = 'diem khong hop le'
-% elseif diem<=4 ketqua = 'Yeu'
-% elseif diem<=6 ketqua = 'Trung binh'
-% elseif diem<=8 ketqua = 'Kha'
-% else ketqua = 'Gioi'
+% diem = input('Nhap diem:');
+% if (diem==9)|(diem==10)
+%     disp('Loai gioi')
+% elseif (diem==7)|(diem==8)
+%     disp('Loai kha')
+% elseif (diem==5)|(diem==6)
+%     disp('Loai trung binh')
+% elseif (diem>=0)&(diem<=4)&(mod(diem,1)==0)
+%     disp('Loai yeu')
+% else
+%     disp('Diem vao khong hop le')
 % end
-% fprintf('%s',ketqua)
-
 %% vd trang 11/31 chuong trinh doan tuoi
-% r1 = rand(10,1);
-% r2 = randi(10,3);
-% r3 = randn(10,1);
-% r4 = randperm(40,5);
-% randi(40);
-% a = 35;
-% b = 45;
-% r = (b-a).*rand(1) + a;
-% r
+% % x = 29;
+% x = randi([20 40], 1);
+% tuoi = input('Nhap tuoi: ');
+% if mod(tuoi,1)==0
+%     if tuoi>x disp(['Tuoi lon hon ', num2str(x)])
+%     elseif tuoi==x disp(['Tuoi bang ', num2str(x)])
+%     else disp(['Tuoi nho hon ', num2str(x)])
+%     end
+% else
+%     disp('Tuoi phai la so nguyen')
+% end
+
+%% vd trang 12/31 tinh tong S = 1 + 2 + 3 + ... + n
+n = NaN;
+while isnan(n)
+    n = str2num(input('Nhap so nguyen duong n = ','s'));
+end
+result = 'S =';
+if mod(n,1)==0 & n>0
+    if n==1 disp('S = 1')
+    else
+        tong = 0;
+        for i=1:n
+            tong = tong + i;
+        end
+        if n==2 result = strcat(result, ' 1 + 2 =');
+        elseif n==3 result = strcat(result, ' 1 + 2 + 3 =');
+        else result = strcat(result, [' 1 + 2 + ... + ', num2str(n), ' =']);
+        end
+        result = strcat(result, [' ', num2str(tong)]);
+        disp(result)
+    end
+else
+    disp('n phai la so nguyen duong')
+end
