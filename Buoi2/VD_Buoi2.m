@@ -294,7 +294,7 @@ end
 
 %% vd trang 20/31
 % n = input('cho biet diem : ');
-% disp('phan loai:');
+% disp('phan loai: ');
 % switch n
 %     case {0,1,2,3,4}
 %         disp('loai yeu')
@@ -308,3 +308,6 @@ end
 %         disp('khong hop le')
 % end
 
+% Bai tap buoi 4, 1/9/2020
+
+%% switch case
