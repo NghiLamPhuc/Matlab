@@ -1,3 +1,4 @@
+clc; clear all; format long;
 %% Bai 1. Tinh tong k^2/(k-1) k=5..20
 % S = 0;
 % for k=5:20
@@ -35,12 +36,13 @@
 % disp(['Bai 3, S = ', num2str(S)])
 
 %% Tim gia tri lon nhat cua n de sigma(k^2),k=1..n < 100
-% k = 1;
-% S = 0;
-% n = 0;
-% while S < 100
+%% sigma(k^2),k=1..n <=> 1^2 + 2^2 + 3^2 + ... + n^2 < 100
+% k = 1; S = 1;
+% while S + (k+1)^2 < 100
 %     k = k + 1;
-%     n = n + 1;
-%     S = S + (k*k);
+%     S = S + k*k;
 % end
-% disp(n)
+% k
+
+
+
