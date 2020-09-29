@@ -31,7 +31,22 @@ format long
 % Giai_PT_Bac_2(a,b,c);
 
 %% bai tap 5
+% n = input('n = ');
+% fprintf('%d! = %d\n', n, Giai_thua(n));
 
 %% bai tap 6
+% n = input('n = ');
+% k = input('k = ');
+% fprintf('To hop chap %d cua %d phan tu la: %d\n', k, n, To_hop(n, k));
 
 %% bai tap 7
+% v = input('Vector: ');
+% n = input('Chuan (1,2,0): ');
+% fprintf('Chuan %d = %f\n', n, TinhChuan_Vector(v, n));
+
+%% bai tap 8
+% a = input('a = ');
+% ep = input('epsilon = ');
+% fprintf('Can bac hai cua %d = %f\n', a, Can_bac_hai(a, ep));
+
+%% bai tap 9
