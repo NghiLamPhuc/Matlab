@@ -3,7 +3,7 @@ function result = TinhChuan_Vector(v, n)
 %     if n == '1'
     result = 0;
     if n == 1
-        for i=1:length(v)
+        for i=1:length(v) %numel, size
             result = result + abs(v(i));
         end
     end

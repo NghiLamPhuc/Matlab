@@ -50,3 +50,5 @@ format long
 % fprintf('Can bac hai cua %d = %f\n', a, Can_bac_hai(a, ep));
 
 %% bai tap 9
+tinhXapXiTichPhan(0, 1, 10, 1)
+tinhXapXiTichPhan(0, pi, 10, 2)
