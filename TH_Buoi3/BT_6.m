@@ -132,31 +132,31 @@ format long
 % A(2, :) = A(2, :) - 2 * A(1, :)
 
 %% Bai tap 6
-% B = [1 -1 5 -1; 1 1 -2 3; 3 -1 8 1; 1 3 -9 7]
-% % rref(B)
-% % rats(rref(B))
-% % Bien doi so cap tren dong
-% B(2,:) = B(2,:) + (-1)*B(1,:)
-% B(3,:) = B(3,:) + (-3)*B(1,:)
-% B(4,:) = B(4,:) + (-1)*B(1,:) 
+B = [1 -1 5 -1; 1 1 -2 3; 3 -1 8 1; 1 3 -9 7]
+% rref(B)
+% rats(rref(B))
+% Bien doi so cap tren dong
+B(2,:) = B(2,:) + (-1)*B(1,:)
+B(3,:) = B(3,:) + (-3)*B(1,:)
+B(4,:) = B(4,:) + (-1)*B(1,:) 
+
+B(2,:) = B(2,:)/2
+B(3,:) = B(3,:) + (-2)*B(2,:)
+B(4,:) = B(4,:) + (-4)*B(2,:)
+
+B(1,:) = B(1,:) + B(2,:)
+rats(B) % Hien thi B theo pha^n so.
 % 
-% B(2,:) = B(2,:)/2
-% B(3,:) = B(3,:) + (-2)*B(2,:)
-% B(4,:) = B(4,:) + (-4)*B(2,:)
-% 
-% B(1,:) = B(1,:) + B(2,:)
-% rats(B) % Hien thi B theo pha^n so.
-% % 
-% num_row_B = size(B, 1);
-% rowZero = zeros(1, num_row_B);% tao vector 0
-% r = num_row_B;
-% 
-% for i=1:num_row_B
-%     if B(i,:) == rowZero
-%         r = r - 1;
-%     end
-% end
-% r
+num_row_B = size(B, 1);
+rowZero = zeros(1, num_row_B);% tao vector 0
+r = num_row_B;
+
+for i=1:num_row_B
+    if B(i,:) == rowZero
+        r = r - 1;
+    end
+end
+r
 
 % % theo bai Quynh dua.
 % m = rank(B);
