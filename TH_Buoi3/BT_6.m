@@ -132,38 +132,39 @@ format long
 % A(2, :) = A(2, :) - 2 * A(1, :)
 
 %% Bai tap 6
-% B = [1 -1 5 -1;
-%      1 1 -2 3;
-%      3 -1 8 1;
-%      1 3 -9 7];
-% syms x y z
+B = [1 -1 5 -1;
+     1 1 -2 3;
+     3 -1 8 1;
+     1 3 -9 7];
+
 % rats(rref(B))
  
-% B(2,:) = B(2,:) - B(1,:);
-% B(3,:) = B(3,:) - 3*B(1,:);
-% B(4,:) = B(4,:) - B(1,:);
-% 
-% B_2_4 = eye(4);
-% temp = B_2_4(2,:);
-% B_2_4(2,:) = B_2_4(4,:);
-% B_2_4(4,:) = temp;
-% B = B_2_4 * B;
-% 
-% B(3,:) = 2*B(3,:) - B(2,:);
-% B(4,:) = 2*B(4,:) - B(2,:)
-% B(2,:) = B(2,:)/4
-% 
-% num_row_B = size(B, 1);
-% rowZero = zeros(1, num_row_B);
-% 
-% r = num_row_B;
-% 
-% for i=1:num_row_B
-%     if B(i,:) == rowZero
-%         r = r - 1;
-%     end
-% end
-% r
+B(2,:) = B(2,:) - B(1,:)
+B(3,:) = B(3,:) - 3*B(1,:)
+B(4,:) = B(4,:) - B(1,:)
+
+B_2_4 = eye(4)
+temp = B_2_4(2,:);
+B_2_4(2,:) = B_2_4(4,:)
+B_2_4(4,:) = temp
+B = B_2_4 * B
+
+B(3,:) = 2*B(3,:) - B(2,:);
+B(4,:) = 2*B(4,:) - B(2,:)
+B(2,:) = B(2,:)/4
+rats(B)
+
+num_row_B = size(B, 1);
+rowZero = zeros(1, num_row_B);
+
+r = num_row_B;
+
+for i=1:num_row_B
+    if B(i,:) == rowZero
+        r = r - 1;
+    end
+end
+r
 
 
 

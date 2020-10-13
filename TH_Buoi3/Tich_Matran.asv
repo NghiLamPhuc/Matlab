@@ -1,5 +1,0 @@
-function P = Tich_Matran(A,B)
-% Tich 2 ma tran bang vong lap for
-[num_row_A, num = 
-
-end
