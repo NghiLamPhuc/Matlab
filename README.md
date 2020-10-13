@@ -6,6 +6,5 @@ Lap trinh tinh toan hoc ki 1 2020 2021
 Ca 3-4, A504 , 9/10/2020
 
 ![App](Picture/BT6/Debai/BT6_1.jpg)
-
 ![App](Picture/BT6/GBT6_1.PNG)
 
