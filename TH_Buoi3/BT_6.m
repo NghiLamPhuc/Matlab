@@ -9,40 +9,38 @@ format long
 % % ########################################## BT 6
 
 %% Bai tap 1.
-% A = [2 4 1; 6 7 2; 3 5 9];
-% 
-% % %a
+% A = [2 4 1; 6 7 2; 3 5 9]
+% %a
 % x = A(1,:)
-% % %b
+% %b
 % Y = A(end-1:end,:)
-% % %c
+% %c
 % S_r = sum(A, 2)
-% % %d
-% S_c = sum(A)
-% % %e
-% minA = min(A(:))
-% maxA = max(A(:))
-% % %f
+% %d
+% S_c = sum(A) %sum(A,1)
+% %e
+% min_A = min(A(:))
+% max_A = max(A(:))
+% %f
 % S_A = sum(A(:))
 
 %% Bai tap 2.
-% rng(42); %giu bo tao ngau nhien moi lan giong nhau
+% rng(42); %giu bo tao ngau nhien moi lan giong nhau, co the dat khac 42
 % A = randi([-10, 10], 4)
 % % A = round(-10+(10+10)*rand(4,4))
+% % % --> a + (b - a)*rand(m,n)
 % %a
-% A_15 = A + 15
+% A = A + 15
 % %b
-% A_2 = A.^2
+% A = A.^2
 % %c
 % A([1,2],:) = A([1,2],:) + 10
 % %d
 % A(:, [1 4]) = A(:, [1 4]) + 10
 % %e
-% A_inv = inv(A)
-% % A_inv = A^(-1)
-% A*A_inv % kiem tra, neu ket qua la ma tran don vi thi dung
+% 1./A
 % %f
-% A_sqrt = sqrt(A)
+% sqrt(A)
 % A_sqrt = A.^0.5
 %% Bai tap 3
 % A = [1 2 3;5 6 9;10 11 15];
@@ -51,14 +49,23 @@ format long
 % A_U = zeros(row);
 % A_L = zeros(row);
 % A_D = zeros(row);
+% 
+% for i=1:row
+%    A_U(i, i:col) = A(i, i:col);
+%    A_L(i, 1:i) = A(i, 1:i);
+%    A_D(i,i) = A(i,i);
+% end
+% A_U
+% A_L
+% A_D
 
-% % C1
+% % Cach khac 1
 % for i=1:row
 %     for j=1:col
-%         if i>=j
+%         if i<=j
 %            A_U(i,j)=A(i,j);
 %         end
-%         if i<=j
+%         if i>=j
 %            A_L(i,j)=A(i,j); 
 %         end
 %         if i==j
@@ -70,8 +77,7 @@ format long
 % A_L
 % A_D
 
-
-% % C2
+% % Cach khac 2
 % for i=1:row
 %    for j=i:col
 %       A_U(i,j) = A(i,j); 
@@ -87,39 +93,31 @@ format long
 % A_L
 % A_D
 
+% % Neu du`ng ham co san
+% A_U = triu(A)
+% A_L = tril(A)
+% A_D = diag(diag(A))
 %% Bai tap 4
-% A = [1 2 3 5 4;
-%     5 6 8 9 11;
-%     3 1 2 5 7;
-%     9 2 5 6 12;
-%     2 5 7 7 14];
-% B = [11 12 20 30 32;
-%     1 2 36 3 5;
-%     31 22 25 9 11;
-%     5 6 7 10 12;
-%     15 32 24 34 38];
-% num_of_row_A = size(A, 1);
-% num_of_col_A = size(A, 2);
-% num_of_row_B = size(B, 1);
-% num_of_col_B = size(B, 2);
+% A = [1 2 3 5 4; 5 6 8 9 11; 3 1 2 5 7; 9 2 5 6 12; 2 5 7 7 14];
+% B = [11 12 20 30 32; 1 2 36 3 5; 31 22 25 9 11; 5 6 7 10 12; 15 32 24 34 38];
+% num_row_A = size(A, 1);
+% num_col_A = size(A, 2);
+% [num_row_B, num_col_B] = size(B); % viet 2 kieu
 % %a
-% S = zeros(num_of_row_A, num_of_col_A);
-% for i=1:num_of_row_A
-%     for j=1:num_of_col_A
+% S = zeros(num_row_A, num_col_A);
+% for i=1:num_row_A
+%     for j=1:num_col_A
 %         S(i,j) = A(i,j) + B(i,j);
 %     end
 % end
 % S%-(A+B)
-
 % %b
-% P = zeros(num_of_row_A, num_of_col_B);
-% for i=1:num_of_row_A
-%     for j=1:num_of_col_B
-%         element_P = 0;
-%         for k=1:num_of_col_A % hoac num_of_row_B
-%             element_P = element_P + A(i, k) * B(k, j);
+% P = zeros(num_row_A, num_col_B);
+% for row_A = 1:num_row_A
+%     for col_B = 1:num_col_B
+%         for elem = 1:num_col_A % hoac num_of_row_B; elem:element
+%             P(row_A, col_B) = P(row_A, col_B) + A(row_A, elem)*B(elem, col_B);
 %         end
-%         P(i, j) = element_P;
 %     end
 % end
 % P%-(A*B)
@@ -134,12 +132,12 @@ format long
 % A(2, :) = A(2, :) - 2 * A(1, :)
 
 %% Bai tap 6
-B = [1 -1 5 -1;
-     1 1 -2 3;
-     3 -1 8 1;
-     1 3 -9 7];
+% B = [1 -1 5 -1;
+%      1 1 -2 3;
+%      3 -1 8 1;
+%      1 3 -9 7];
 % syms x y z
-rats(rref(B))
+% rats(rref(B))
  
 % B(2,:) = B(2,:) - B(1,:);
 % B(3,:) = B(3,:) - 3*B(1,:);

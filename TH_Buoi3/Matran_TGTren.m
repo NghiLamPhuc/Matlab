@@ -6,9 +6,7 @@ function A_U = Matran_TGTren(A)
        A_U = 'Khong phai ma tran vuong!';
     else
        for i=1:row_A
-           for j=i:col_A
-               A_U(i,j) = A(i,j);
-           end
+           A_U(i, i:col_A) = A(i, i:col_A);
        end
     end
 

@@ -6,10 +6,7 @@ function A_L = Matran_TGDuoi(A)
        A_L = 'Khong phai ma tran vuong!';
     else
        for i=1:row_A
-           for j=1:i
-               A_L(i,j) = A(i,j);
-           end
+           A_L(i, 1:i) = A(i, 1:i);
        end
     end
-
 end
