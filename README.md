@@ -23,7 +23,7 @@ Link down buổi 3: https://minhaskamal.github.io/DownGit/#/home?url=https://git
 ![App](Picture/BT6/GBT6_5.PNG)
 
 ![App](Picture/BT6/Debai/BT6_6.jpg)
-![App](Picture/BT6/GBT_6.PNG)
+![App](Picture/BT6/GBT_6_6.PNG)
 
 ![App](Picture/BT6/Debai/BT6_7.jpg)
 ![App](Picture/BT6/GBT6_7.PNG)
