@@ -53,3 +53,10 @@ Link down buổi 3: https://minhaskamal.github.io/DownGit/#/home?url=https://git
 ![App](Picture/BT6/GBT6_9.PNG)
 
 ![App](Picture/BT6/GBT6_9_run.PNG)
+
+
+![App](Picture/BT6/Debai/BT6_10.jpg)
+
+![App](Picture/BT6/GBT6_10.PNG)
+
+![App](Picture/BT6/GBT6_10_run.PNG)
