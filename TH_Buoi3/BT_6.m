@@ -132,42 +132,39 @@ format long
 % A(2, :) = A(2, :) - 2 * A(1, :)
 
 %% Bai tap 6
-B = [1 -1 5 -1;
-     1 1 -2 3;
-     3 -1 8 1;
-     1 3 -9 7];
-
+B = [1 -1 5 -1; 1 1 -2 3; 3 -1 8 1; 1 3 -9 7];
 % rats(rref(B))
- 
-B(2,:) = B(2,:) - B(1,:)
-B(3,:) = B(3,:) - 3*B(1,:)
-B(4,:) = B(4,:) - B(1,:)
+% % Bien doi so cap tren dong
+% B(2,:) = B(2,:) - B(1,:)
+% B(3,:) = B(3,:) - 3*B(1,:)
+% B(4,:) = B(4,:) - B(1,:)
+% 
+% % Ma tran don vi cung kich thuoc B
+% B_2_4 = eye(4)
+% % % Doi vi tri dong 2 dong 4 ma tran don vi
+% temp = B_2_4(2,:);
+% B_2_4(2,:) = B_2_4(4,:)
+% B_2_4(4,:) = temp
+% % % Doi vi tri dong 2 dong 4 ma tran B
+% B = B_2_4 * B
+% % % Bien doi so cap tren dong
+% B(3,:) = 2*B(3,:) - B(2,:);
+% B(4,:) = 2*B(4,:) - B(2,:)
+% B(2,:) = B(2,:)/4
+% rats(B) % Hien thi B theo pha^n so.
+% 
+% num_row_B = size(B, 1);
+% rowZero = zeros(1, num_row_B);% tao vector 0
+% r = num_row_B;
+% 
+% for i=1:num_row_B
+%     if B(i,:) == rowZero
+%         r = r - 1;
+%     end
+% end
+% r
 
-B_2_4 = eye(4)
-temp = B_2_4(2,:);
-B_2_4(2,:) = B_2_4(4,:)
-B_2_4(4,:) = temp
-B = B_2_4 * B
-
-B(3,:) = 2*B(3,:) - B(2,:);
-B(4,:) = 2*B(4,:) - B(2,:)
-B(2,:) = B(2,:)/4
-rats(B)
-
-num_row_B = size(B, 1);
-rowZero = zeros(1, num_row_B);
-
-r = num_row_B;
-
-for i=1:num_row_B
-    if B(i,:) == rowZero
-        r = r - 1;
-    end
-end
-r
-
-
-
+% % theo bai Quynh dua.
 % m = rank(B);
 % B(2,:) = B(2,:) - 2*B(1,:);
 % B(3,:) = B(3,:) - 3*B(1,:);
@@ -179,6 +176,7 @@ r
 % for i=1:4
 %     if B(i,:) == a(1,:)
 %         m = m-1;
+%         1
 %     end
 % end
 % m
