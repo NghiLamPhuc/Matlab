@@ -1,6 +1,6 @@
 # Thực hành tuần 2. BT_5
 
-Ca 3-4 A704 2/10/2020
+Ca 3-4 A704 25/09/2020
 
 Link download: 
 
