@@ -1,42 +1,32 @@
-# Thực hành tuần 3. BT_6
+# Thực hành tuần 2. BT_5
 
-Ca 3-4 A504 9/10/2020
+Ca 3-4 A704 2/10/2020
 
-Link download: https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgithub.com%2FNghiLamPhuc%2FMatlab%2Ftree%2Fmaster%2FTH_Buoi3%2FCode
+Link download: 
 
-![App](./BT6/Debai/BT6_1.jpg)
-![App](./BT6/GBT6_1.PNG)
+![App](./Debai/BT5_1.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_1.JPG)
 
-![App](./BT6/Debai/BT6_2.jpg)
-![App](./BT6/GBT6_2.PNG)
+![App](./BT_5/Debai/BT5_2.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_2.JPG)
 
-![App](./BT6/Debai/BT6_3.jpg)
-![App](./BT6/GBT6_3.PNG)
+![App](./BT_5/Debai/BT5_3.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_3.JPG)
 
-![App](./BT6/Debai/BT6_4.jpg)
-![App](./BT6/GBT6_4.PNG)
-![App](./BT6/GBT6_4_KQ.PNG)
+![App](./BT_5/Debai/BT5_4.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_4.JPG)
 
-![App](./BT6/Debai/BT6_5.jpg)
-![App](./BT6/GBT6_5.PNG)
+![App](./BT_5/Debai/BT5_5.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_5.JPG)
 
-![App](./BT6/Debai/BT6_6.jpg)
-![App](./BT6/GBT_6_6.PNG)
+![App](./BT_5/Debai/BT5_6.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_6.JPG)
 
-![App](./BT6/Debai/BT6_7.jpg)
-![App](./BT6/GBT6_7.PNG)
-![App](./BT6/GBT6_7_run.PNG)
+![App](./BT_5/Debai/BT5_7.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_7.JPG)
 
-![App](./BT6/Debai/BT6_8.jpg)
-![App](./BT6/GBT6_8_a.PNG)
-![App](./BT6/GBT6_8_b.PNG)
-![App](./BT6/GBT6_8_c.PNG)
-![App](./BT6/GBT6_8_run.PNG)
+![App](./BT_5/Debai/BT5_8.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_8.JPG)
 
-![App](./BT6/Debai/BT6_9.jpg)
-![App](./BT6/GBT6_9.PNG)
-![App](./BT6/GBT6_9_run.PNG)
-
-![App](./BT6/Debai/BT6_10.jpg)
-![App](./BT6/GBT6_10.PNG)
-![App](./BT6/GBT6_10_run.PNG)
+![App](./BT_5/Debai/BT5_9.JPG)
+![App](./BT_5/BaiLam_HinhAnh/GBT5_9.JPG)
