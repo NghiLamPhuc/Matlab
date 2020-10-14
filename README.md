@@ -2,4 +2,7 @@
 
 Lap trinh tinh toan hoc ki 1 2020 2021
 
+C02033 - Nhóm 1. B408. GV: Đ.T.A.Thư
+
+3 tín chỉ Tự chọn C, thay Tính toán số với máy tính.
 
