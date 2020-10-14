@@ -1,0 +1,12 @@
+function result = xapXiTichPhan(a, b, n, f)
+% Tich xap xi tich phan bang phuong phap diem giua
+result = 0;
+delta_x = (b-a)/n;
+x = zeros(1, n);
+x_mid = 0;
+for i = 1:n
+    x_mid = 0.5*(2*a + )
+    result = result + f(x_mid) * delta_x;
+end
+
+end

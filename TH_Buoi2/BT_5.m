@@ -8,10 +8,10 @@ format long
 
 % % ########################################## BT 5
 %% Bai tap 1
-% a = input('a = ');
-% b = input('b = ');
-% c = input('c = ');
-% fprintf('Dien tich = %f\n', DT_TamGiac_Vuong(a,b,c));
+a = input('a = ');
+b = input('b = ');
+c = input('c = ');
+fprintf('Dien tich = %f\n', DT_TamGiac_Vuong(a,b,c));
 
 %% Bai tap 2
 % x = input('x = ');
@@ -50,5 +50,10 @@ format long
 % fprintf('Can bac hai cua %d = %f\n', a, Can_bac_hai(a, ep));
 
 %% bai tap 9
-tinhXapXiTichPhan(0, 1, 10, 1)
-tinhXapXiTichPhan(0, pi, 10, 2)
+% tinhXapXiTichPhan(0, 1, 10, 1)
+% tinhXapXiTichPhan(0, pi, 10, 2)
+
+% f_a = @(x) x^2;
+% f_b = @(x) sin(x);
+% xapXiTichPhan(0, 1, 10, f_a)
+% xapXiTichPhan(0, pi, 10, f_b)
