@@ -1,8 +1,8 @@
 # Thực hành tuần 2. BT_5
 
-Ca 3-4 A704 25/09/2020
+Ca 3-4 A702 25/09/2020
 
-Link download: 
+Link download: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NghiLamPhuc/Matlab/tree/master/Bai_tap_thuc_hanh/BT_5/Code
 
 ![App](./Debai/BT5_1.JPG)
 ![App](./BaiLam_HinhAnh/GBT5_1.JPG)
