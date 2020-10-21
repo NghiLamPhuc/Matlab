@@ -24,3 +24,8 @@ Link download: https://minhaskamal.github.io/DownGit/#/home?url=https://github.c
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_3_7.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3_7.JPG)
+
+![App](./HinhAnh/Debai_HinhAnh/BT_3Ph2_1.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_1.JPG)
+
+
