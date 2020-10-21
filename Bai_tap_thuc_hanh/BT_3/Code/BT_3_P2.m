@@ -39,6 +39,15 @@ format long
 % disp(num2str(squareNums));
 % fprintf('Tong cac so chinh phuong = %d\n', sum(squareNums) );
 
+
+% %C2
+% v = input('vector = ');
+% S_chan = 0; S_le = 0; S_nt_chan = 0; S_nt_le; S_cp = 0;
+% for i=v
+%     if mod(i, 2) == 0
+%         S_chan = S_chan + i;
+%         .....sau lam tiep
+% end
 %% bai tap 3
 % F = zeros(1, 10);
 % F(1) = 1; F(2) = 1;
@@ -97,10 +106,64 @@ format long
 % numel(x(x>0))
 % size(x(x==0), 2)
 
-%% bai tap 6 for
-
-
-
+%% bai tap 6 while
+% %-----------------------------------------------------------------------a
+% epsilonAr = [10^(-6) 10^(-12)];
+% for epsilon = epsilonAr
+%     x = 2;
+%     myEXP = 1;
+%     n = 0;
+%     nGiaiThua = 1;
+%     while abs(myEXP + (x^(n+1))/(nGiaiThua*(n+1)) - exp(x) ) > epsilon
+%         n = n + 1;
+%         nGiaiThua = nGiaiThua * n;
+%         nMoi = x^n/nGiaiThua;
+%         myEXP = myEXP + nMoi;
+%     end
+%     fprintf('epsilon = %.e\n', epsilon);
+%     fprintf('n = %d\n', n);
+%     fprintf('myEXP          = %.20f\n', myEXP);
+%     fprintf('exp(%f)  = %.20f\n', x, exp(x));
+%     fprintf('myEXP - exp(x) = %.e\n\n', abs(myEXP - exp(x)));
+% end
+% %-----------------------------------------------------------------------b
+% epsilonAr = [10^(-6) 10^(-12)];
+% for epsilon = epsilonAr
+%     x = 2;
+%     n = 0;
+%     mySin = x;
+%     denom = 1; %denomenator: mau so
+%     while abs(mySin + ((-1)^(n + 1))*(x^(2*n + 3)) / (denom * 2*(n+1) * (2*n + 3)) - sin(x)) > epsilon
+%         n = n + 1;
+%         denom = denom * 2*n * (2*n + 1);
+%         mySin = mySin + ((-1)^n)*(x^(2*n + 1))/denom;
+%     end
+%     fprintf('epsilon = %.e\n', epsilon);
+%     fprintf('n = %d\n', n);
+%     fprintf('mySin          = %.15f\n', mySin);
+%     fprintf('sin(%f)  = %.15f\n', x, sin(x));
+%     fprintf('mySin - sin(x) = %.e\n', abs(mySin - sin(x)));
+%     fprintf('mySin - sin(x) = %.15f\n\n', abs(mySin - sin(x)));
+% end
+% %-----------------------------------------------------------------------c
+epsilonAr = [10^(-6) 10^(-12)];
+for epsilon = epsilonAr
+    x = 5;
+    n = 0;
+    myCos = 1;
+    denom = 1; %denomenator: mau so
+    while abs(myCos + ((-1)^(n+1))*(x^(2*(n+1))) / denom * 2*(n+1) * (2*(n+1) - 1) - cos(x) ) > epsilon
+        n = n + 1;
+        denom = denom * 2*n * (2*n - 1);
+        myCos = myCos + ((-1)^n)*(x^(2*n))/denom;
+    end
+    fprintf('epsilon = %.e\n', epsilon);
+    fprintf('n = %d\n', n);
+    fprintf('myCos          = %.15f\n', myCos);
+    fprintf('cos(%f)  = %.15f\n', x, cos(x));
+    fprintf('myCos - cos(x) = %.e\n', abs(myCos - cos(x)));
+    fprintf('myCos - cos(x) = %.15f\n\n', abs(myCos - cos(x)));
+end
 %% Bai tap 6
 % n = 0;
 % x = 2;
