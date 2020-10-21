@@ -2,7 +2,7 @@
 
 Ca 3-4 A504 9/10/2020
 
-Link download: 
+Link download: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NghiLamPhuc/Matlab/tree/master/Bai_tap_thuc_hanh/BT_6/Code
 
 ![App](./HinhAnh/Debai_HinhAnh/BT6_1.jpg)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT6_1.PNG)
