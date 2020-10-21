@@ -42,3 +42,5 @@ Link download: https://minhaskamal.github.io/DownGit/#/home?url=https:%2F%2Fgith
 ![App](./BT6/GBT6_10_run.PNG)
 
 ![App](./HinhAnh/Debai_HinhAnh/BT6_11.jpg)
+![App](./HinhAnh/Bailam_HinhAnh/GBT6_11.jpg)
+![App](./HinhAnh/Bailam_HinhAnh/GBT6_11_run.jpg)
