@@ -201,7 +201,7 @@ format long
 % Tich_Matran(A,B)
 
 %% Bai tap 11
-% A = [1 -1 5 -1; 1 1 -2 3; 3 -1 8 1; 1 3 -9 7]
+A = [1 -1 5 -1; 1 1 -2 3; 3 -1 8 1; 1 3 -9 7]
 % A = [0 4 1 10 3; 4 8 7 18 35; 10 18 17 40 83; 1 7 3 17 9]
 % A = [0 0 0 2; 0 0 0 3; 0 0 0 4; 0 0 0 5]
 % A = [0 -2 0 2; 0 0 0 3; 0 0 0 4; 0 0 0 5]
@@ -210,10 +210,10 @@ format long
 % A = [1 2 -1 2; 2 -3 7 1; 1 -1 -3 -5; 10 2 4 15]
 % A = [1 1 1 1 1; 1 -1 1 1 1; 1 1 -1 1 1; 1 1 1 -1 1; 1 1 1 1 -1]
 % A = [0 1; 1 0];
-% [B,r] = get_echelon_matrix(A);
-% disp(B);
-% disp(r);
-% disp(rats(get_echelon_matrix(B)));
+[B,r] = get_echelon_matrix(A);
+disp(B);
+fprintf('rank = %d\n', r);
+disp(rats(get_echelon_matrix(B)));
 
 % rref(A)
 % rats(rref(A))
