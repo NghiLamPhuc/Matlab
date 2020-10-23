@@ -43,10 +43,20 @@ Link download: https://minhaskamal.github.io/DownGit/#/home?url=https://github.c
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_5.JPG)
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_3Ph2_6.JPG)
-![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6.JPG)
+
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6afor.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6afor.JPG)
+
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6bfor.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6bfor.JPG)
+
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6cfor.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6cfor.JPG)
+
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_3Ph2_7.JPG)
-![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_7.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_7for.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_7while.JPG)
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_3Ph2_8.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_8_a.JPG)

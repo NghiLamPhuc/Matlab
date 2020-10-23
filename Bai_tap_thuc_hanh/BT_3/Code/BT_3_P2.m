@@ -168,42 +168,72 @@ format long
 %     fprintf('|cos(%f) - myCos| = %.e\n\n', x, abs(cosX - myCos));
 % end
 %% Bai tap 6 for
-% %-----------------------------------------------------------------------a
+%-----------------------------------------------------------------------a
 % x = 2;
 % expX = exp(x);
-% n = 16;
-% myEXP = 1;
-% for k=1:n
-%     kFactorial = 1;
-%     for i=1:k
-%         kFactorial = kFactorial * i;
-%     end
-%     myEXP = myEXP + (x^k)/kFactorial;
-% end
-% fprintf('%.20f\n', expX);
-% fprintf('%.20f\n', myEXP);
-
-%% bai tap 6
-% n = 0; %n tang dan qua cac vong lap
-% x = 2; %mac dinh 1 so
+% n = 0;
 % while 1
-%     S = 0;
-%     for k=0:n
-%         k_giaithua = 1;
-%         for i=2:k
-%             k_giaithua = k_giaithua * i;
+%     myEXP = 1;
+%     for k=1:n
+%         kFactorial = 1;
+%         for i=1:k
+%             kFactorial = kFactorial * i;
 %         end
-%         S = S + x^k / k_giaithua;
+%         myEXP = myEXP + (x^k)/kFactorial;
 %     end
-%     if abs(exp(x) - S) <= 10^(-6)
+%     if abs(exp(x) - myEXP) <= 10^(-12) %10^(-6)
 %         break;
 %     end
 %     n = n + 1;
 % end
-% fprintf('e^%d     = %5.8f\n', x, exp(2));
-% fprintf('S(n=%d) = %5.8f\n', n, S);
-% fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n, abs(exp(x) - S) )
-
+% fprintf('%.20f\n', expX);
+% fprintf('%.20f\n', myEXP);
+% fprintf('n = %d\n', n);
+% fprintf('%.e\n', abs(expX - myEXP));
+% %-----------------------------------------------------------------------b
+% x = 2;
+% sinX = sin(x);
+% n = 0;
+% while 1
+%     mySin = x;
+%     for k=1:n
+%         kGiaiThua = 1;
+%         for i = 1:(2*k+1)
+%             kGiaiThua = kGiaiThua * i;
+%         end
+%         mySin = mySin + ((-1)^k) * (x^(2*k+1)) / kGiaiThua;
+%     end
+%     if abs(mySin - sinX) <= 10^(-12) % 10^(-6)
+%         break;
+%     end
+%     n = n + 1;
+% end
+% fprintf('%.20f\n', sinX);
+% fprintf('%.20f\n', mySin);
+% fprintf('n = %d\n', n);
+% fprintf('%.e\n', abs(sinX - mySin));
+% %-----------------------------------------------------------------------c
+% x = 2;
+% cosX = cos(x);
+% n = 0;
+% while 1
+%     myCos = 1;
+%     for k=1:n
+%         kGiaiThua = 1;
+%         for i = 2:2*k
+%             kGiaiThua = kGiaiThua * i;
+%         end
+%         myCos = myCos + ((-1)^k) * (x^(2*k)) / kGiaiThua;
+%     end
+%     if abs(myCos - cosX) <= 10^(-12) %10^(-6)
+%         break;
+%     end
+%     n = n + 1;
+% end
+% fprintf('%.20f\n', cosX);
+% fprintf('%.20f\n', myCos);
+% fprintf('n = %d\n', n);
+% fprintf('%.e\n', abs(cosX - myCos));
 %% Bai tap 7 while
 % %-----------------------------------------------------------------------a
 % n = 1;
@@ -232,6 +262,7 @@ format long
 % fprintf('n = %d => S = %f\n', n, S);
 
 %% Bai tap 7 for
+% %-----------------------------------------------------------------------a
 % n = 0;
 % while 1
 %     S = 0;
@@ -243,8 +274,8 @@ format long
 %     end
 %     n = n + 1;
 % end
-% fprintf('n = %d', n);
-% 
+% fprintf('n = %d => S = %f\n', n, S);
+% %-----------------------------------------------------------------------b
 % n = 0;
 % while 1
 %     S = 0;
@@ -256,20 +287,20 @@ format long
 %     end
 %     n = n + 1;
 % end
-% fprintf('n = %d', n);
-% 
+% fprintf('n = %d => S = %f\n', n, S);
+% %-----------------------------------------------------------------------c
 % n = 0;
 % while 1
 %     S = 0;
 %     for k=1:n
-%         S = S + (k^2 / k^2 + 1);
+%         S = S + k^2 / (k^2 + 1);
 %     end
 %     if S >= 10
 %         break;
 %     end
 %     n = n + 1;
 % end
-% fprintf('n = %d', n);
+% fprintf('n = %d => S = %f\n', n, S);
 
 %% bai tap 8a
 % % c1

@@ -88,6 +88,6 @@ format long
 % end
 
 %% bai tap 7
-for i = 100:999
-    disp(doc_so_3_chu_so(i));
-end
+% for i = 100:999
+%     disp(doc_so_3_chu_so(i));
+% end
