@@ -1,7 +1,8 @@
 %Lam Phuc Nghi
 %51403239
 %Ngay thuc hanh: 18/09/2020
-clear all
+% clear all
+clearvars
 close all
 clc
 format long
@@ -109,12 +110,13 @@ format long
 %% bai tap 6 while
 % %-----------------------------------------------------------------------a
 % epsilonAr = [10^(-6) 10^(-12)];
+% x = 2;
+% expX = exp(x);
 % for epsilon = epsilonAr
-%     x = 2;
 %     myEXP = 1;
 %     n = 0;
 %     nGiaiThua = 1;
-%     while abs(myEXP + (x^(n+1))/(nGiaiThua*(n+1)) - exp(x) ) > epsilon
+%     while abs(myEXP + (x^(n+1))/(nGiaiThua*(n+1)) - expX ) > epsilon
 %         n = n + 1;
 %         nGiaiThua = nGiaiThua * n;
 %         nMoi = x^n/nGiaiThua;
@@ -123,8 +125,8 @@ format long
 %     fprintf('epsilon = %.e\n', epsilon);
 %     fprintf('n = %d\n', n);
 %     fprintf('myEXP          = %.20f\n', myEXP);
-%     fprintf('exp(%f)  = %.20f\n', x, exp(x));
-%     fprintf('myEXP - exp(x) = %.e\n\n', abs(myEXP - exp(x)));
+%     fprintf('exp(%f)  = %.20f\n', x, expX);
+%     fprintf('myEXP - exp(x) = %.e\n\n', abs(myEXP - expX));
 % end
 % %-----------------------------------------------------------------------b
 % epsilonAr = [10^(-6) 10^(-12)];
@@ -146,64 +148,42 @@ format long
 %     fprintf('mySin - sin(x) = %.15f\n\n', abs(mySin - sin(x)));
 % end
 % %-----------------------------------------------------------------------c
-epsilonAr = [10^(-6) 10^(-12)];
-for epsilon = epsilonAr
-    x = 5;
-    n = 0;
-    myCos = 1;
-    denom = 1; %denomenator: mau so
-    while abs(myCos + ((-1)^(n+1))*(x^(2*(n+1))) / denom * 2*(n+1) * (2*(n+1) - 1) - cos(x) ) > epsilon
-        n = n + 1;
-        denom = denom * 2*n * (2*n - 1);
-        myCos = myCos + ((-1)^n)*(x^(2*n))/denom;
-    end
-    fprintf('epsilon = %.e\n', epsilon);
-    fprintf('n = %d\n', n);
-    fprintf('myCos          = %.15f\n', myCos);
-    fprintf('cos(%f)  = %.15f\n', x, cos(x));
-    fprintf('myCos - cos(x) = %.e\n', abs(myCos - cos(x)));
-    fprintf('myCos - cos(x) = %.15f\n\n', abs(myCos - cos(x)));
-end
-%% Bai tap 6
-% n = 0;
-% x = 2;
-% while abs(exp(x) - bai6_a(x, n+1)) > 10^(-6)
-%     n = n + 1;
-% end
-% fprintf('e^%d     = %5.8f\n', x, exp(x));
-% fprintf('S(n=%d) = %5.8f\n', n, bai6_a(x, n));
-% fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n-1, abs(exp(x) - bai6_a(x,n-1)) )
-% fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n, abs(exp(x) - bai6_a(x,n)) )
-% fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n+1, abs(exp(x) - bai6_a(x,n+1)) )
-
-% n = 0;
-% x = 2;
-% while abs(exp(x) - bai6_a(x, n+1)) > 10^(-12)
-%     n = n + 1;
-% end
-% fprintf('e^%d     = %5.13f\n', x, exp(x));
-% fprintf('S(n=%d) = %5.13f\n', n, bai6_a(x, n));
-% fprintf('|e^%d - S(n=%d)| = %.12f\n', x, n-1, abs(exp(x) - bai6_a(x,n-1)) )
-% fprintf('|e^%d - S(n=%d)| = %.12f\n', x, n, abs(exp(x) - bai6_a(x,n)) )
-% fprintf('|e^%d - S(n=%d)| = %.12f\n', x, n+1, abs(exp(x) - bai6_a(x,n+1)) )
-
-
-% n = 0; x = 2;
-% S = 0;
-% while abs(exp(x) - S) > 10^(-6)
-%     n_giaithua = 1;
-%     i = 2;
-%     while i<=n
-%         n_giaithua = n_giaithua*i;
-%         i = i + 1;
+% epsilonAr = [10^(-6) 10^(-12)];
+% x = 1;
+% cosX = cos(x);
+% for epsilon = epsilonAr
+%     n = 0;
+%     myCos = 1;
+%     denom = 1;
+%     while abs(myCos + ((-1)^(n+1)) * x^(2*(n+1)) / (denom * (2*(n+1) - 1) * 2*(n+1)) - cosX) > epsilon
+% %     while abs(myCos - cosX) > epsilon
+%         n = n + 1;
+%         denom = denom * (2*n - 1) * 2*n;
+%         myCos = myCos + ((-1)^n) * x^(2*n) / denom;
 %     end
-%     S = S + x^n / n_giaithua;
-%     n = n + 1;
+%     fprintf('---%.e---\n', epsilon);
+%     fprintf('cos(%f) = %.20f\n', x, cosX);
+%     fprintf('myCos         = %.20f\n', myCos);
+%     fprintf('n = %d\n', n);
+%     fprintf('|cos(%f) - myCos| = %.e\n\n', x, abs(cosX - myCos));
 % end
-% fprintf('e^%d     = %5.8f\n', x, exp(x));
-% fprintf('S(n=%d) = %5.8f\n', n, S);
-% fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n, abs(exp(x) - S) )
+%% Bai tap 6 for
+% %-----------------------------------------------------------------------a
+% x = 2;
+% expX = exp(x);
+% n = 16;
+% myEXP = 1;
+% for k=1:n
+%     kFactorial = 1;
+%     for i=1:k
+%         kFactorial = kFactorial * i;
+%     end
+%     myEXP = myEXP + (x^k)/kFactorial;
+% end
+% fprintf('%.20f\n', expX);
+% fprintf('%.20f\n', myEXP);
 
+%% bai tap 6
 % n = 0; %n tang dan qua cac vong lap
 % x = 2; %mac dinh 1 so
 % while 1
@@ -224,22 +204,8 @@ end
 % fprintf('S(n=%d) = %5.8f\n', n, S);
 % fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n, abs(exp(x) - S) )
 
-%% Bai 6 sin(x)
-% n = 0;
-% x = 2;
-% while abs(sin(x) - bai6_b(x, n+1)) > 10^(-6)
-%     n = n + 1;
-% end
-% fprintf('sin(%d)     = %5.8f\n', x, sin(x));
-% fprintf('S(n=%d) = %5.8f\n', n, bai6_b(x, n));
-% fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n-1, abs(sin(x) - bai6_b(x,n-1)) )
-% fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n, abs(sin(x) - bai6_b(x,n)) )
-% fprintf('|e^%d - S(n=%d)| = %.7f\n', x, n+1, abs(sin(x) - bai6_b(x,n+1)) )
-
-
-
-%% Bai 7 dung while
-
+%% Bai tap 7 while
+% %-----------------------------------------------------------------------a
 % n = 1;
 % S = 5/2; %5/1*(1+1)
 % while S + (5 / ((n + 1) * (n + 2))) <= 4
@@ -247,7 +213,7 @@ end
 %     S = S + (5 / (n * (n + 1)));
 % end
 % fprintf('n = %d => S = %f\n', n, S);
- 
+% %-----------------------------------------------------------------------b
 % n = 1;
 % S = 1/4; %1/1*(1+3)
 % while S < 1/2
@@ -255,16 +221,17 @@ end
 %     S = S + (1 / (n * (n + 3)));
 % end
 % fprintf('n = %d => S = %f\n', n, S);
-% 
+% %-----------------------------------------------------------------------c
 % n = 1;
 % S = 1/2; %1/(1+1)
+% % while S + (((n+1)^2) / ((n+1)^2 + 1)) < 10
 % while S < 10
 %     n = n + 1;
 %     S = S + (n^2) / (n^2 + 1);
 % end
 % fprintf('n = %d => S = %f\n', n, S);
 
-%% Bai 7 dung for
+%% Bai tap 7 for
 % n = 0;
 % while 1
 %     S = 0;
@@ -303,6 +270,7 @@ end
 %     n = n + 1;
 % end
 % fprintf('n = %d', n);
+
 %% bai tap 8a
 % % c1
 % S = 0;
