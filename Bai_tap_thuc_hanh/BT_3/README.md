@@ -44,11 +44,17 @@ Link download: https://minhaskamal.github.io/DownGit/#/home?url=https://github.c
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_3Ph2_6.JPG)
 
+BÀI 6a
+
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6afor.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6awhile.JPG)
 
+BÀI 6b
+
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6bfor.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6bwhile.JPG)
+
+BÀI 6c
 
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6cfor.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_3Ph2_6cwhile.JPG)
