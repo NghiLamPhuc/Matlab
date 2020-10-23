@@ -8,12 +8,18 @@ Link download:
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_1.JPG)
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_4_2.JPG)
-![App](./HinhAnh/Debai_HinhAnh/GBT_4_2.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_2.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_2_ketqua.JPG)
 
-![App](./HinhAnh/Debai_HinhAnh/BT4_3.JPG)
+![App](./HinhAnh/Debai_HinhAnh/BT_4_3.JPG)
+
+Không dùng hàm
+
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_3_nonfunc.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_3_ketquanonfunc.JPG)
+
+Có dùng hàm
+
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_3_func_1.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_3_func_2.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_3_func_1_2_run.JPG)
@@ -32,4 +38,5 @@ Link download:
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_6_ketqua.JPG)
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_4_7.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_7.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_4_7_ketqua.JPG)
