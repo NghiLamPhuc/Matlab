@@ -1,4 +1,4 @@
-# Thực hành tuần 3. BT_4
+# Thực hành tuần 2. BT_4
 
 Ca 3-4 A504 9/10/2020
 
