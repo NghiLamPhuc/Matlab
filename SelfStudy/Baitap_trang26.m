@@ -1,5 +1,5 @@
 clc
-clear all
+clearvars
 format long
 
 %% bai 3
@@ -73,5 +73,6 @@ format long
 % bai11(x)
 
 %% bai 12
-x = rand([1, 10])
-bai12(x)
+% x = rand([1, 10])
+% bai12(x)
+
