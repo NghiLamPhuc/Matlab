@@ -3,6 +3,7 @@
 % Ngay thuc hanh: 28/10/2020
 
 clearvars
+clear al
 close all
 clc
 format long
@@ -49,7 +50,7 @@ format long
 % A = A.^2
 % A([1 2], :) = A([1 2], :) + 10
 % A(:, [1 4]) = A(:, [1 4]) + 10
-% A.^(-1)
+% 1./A
 % sqrt(A) %A.^0.5
 
 %% bai tap trang 43
@@ -61,4 +62,49 @@ format long
 % min(A(:))
 % max(A(:))
 % sum(A(:))
+
+%% bai tap 1 46
+% rng(42);
+% d = 5;
+% A = randi(d,d) + randi(d,d)*i;% % A = (-5 + (5 + 5)*rand(5,5)) + (-5 + (5 + 5)*rand(5,5))*1i
+% rats(A)
+% while any(isinf(inv(A)))
+%     A = round(rand(5,5)) + round(rand(5,5)*1i)
+%     inv(A);
+% end
+
+% E = eye(d);
+% for i=1:d
+%     E(i,i) = complex(1,1);
+% end
+% % rats(E)
+% 
+% AE = [A E]
+% AE(2,:) = AE(2,:) - 5*AE(5,:)
+% AE(3,:) = AE(3,:) - 4*AE(5,:)
+% AE(4,:) = AE(4,:) - 3*AE(5,:)
+% AE(5,:) = AE(5,:) - 0.5*AE(1,:)
+% 
+% x = AE(2,:);
+
+%---------------------------------------------
+% A = [1 2 3; 0 1 4; 1 2 2];
+% [row,col] = size(A);
+% E = eye(3);
+% AE = [A E] % AE = cat(2, A, E)
+% AE(3,:) = AE(1,:) - AE(3,:)
+% AE(2,:) = AE(2,:) - 4*AE(3,:)
+% AE(1,:) = AE(1,:) - 2*AE(2,:)
+% AE(1,:) = AE(1,:) - 3*AE(3,:)
+% AT = AE(:,row+1:2*col)
+
+%% bai tap 4 46
+% A = [1 2; 4 -1]; B = [2 -3; -4 1];
+% inv(A)*inv(B)
+% inv(A*B)
+% inv(B)*inv(A)
+
+% A = [1 7 -2; 2 3 7; 1 8 2];
+% b = [21; 2; -1];
+% rats(rref([A b]))
 

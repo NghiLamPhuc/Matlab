@@ -10,7 +10,7 @@ format long
 %% bai tap 1 for
 % n = input('n = ');
 % nGiaiThua = 1;
-% if n == 0
+% if 0 == n
 %     nGiaiThua = 1;
 % elseif n>=1
 %     for i=2:n
@@ -125,7 +125,7 @@ format long
 % epsilon = 10^(-3);
 % u = 3/5 + 2/5;
 % n = 0;
-% while abs(u - (3/5 + (2/5)*((-1/4)^(n + 1)))) >= epsilon
+% while abs(u - (3/5 + (2/5)*((-1/4)^(n + 1)))) > epsilon
 %     fprintf('%f\n', abs(u - (3/5 + (2/5)*((-1/4)^(n + 1)))));
 %     n = n + 1;
 %     u = 3/5 + (2/5)*((-1/4)^n);
