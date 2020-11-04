@@ -46,7 +46,7 @@ Link download: https://minhaskamal.github.io/DownGit/#/home?url=https://github.c
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_7_7_a_waterfall.JPG)
 
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_7_8.JPG)
-![App](./HinhAnh/BaiLam_HinhAnh/GBT_7_8_ketqua.JPG)
+![App](./HinhAnh/BaiLam_HinhAnh/GBT_7_8_ketqua.jpg)
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_7_9.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_7_9.JPG)
