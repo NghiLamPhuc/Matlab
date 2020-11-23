@@ -45,15 +45,7 @@ format long
 % format long g
 % A = [(2/3)*pi pi/3; pi/6 (5/6)*pi];
 % matsin(A)
-% S = A; % k = 0
-% k = 1;
-% X = (-1)^k/factorial(2*k + 1)*A^(2*k + 1); % X = Sn+1(A) - Sn(A)
-% while abs(max(X(:))) >= 0.01
-%     S = S + (-1)^k / factorial(2*k + 1) * A^(2*k + 1)
-%     k = k + 1;
-%     X = (-1)^k/factorial(2*k + 1)*A^(2*k + 1);
-% end
-% 
+
 % % kiem tra ----------------------------------------------------------
 % S = A;
 % for k=1:8
