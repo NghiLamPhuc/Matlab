@@ -6,6 +6,7 @@ function a_n = dayso(n)
 %  \ a_(n+1) = 5a_n - 3
 %
 % Syntax: dayso(n)
+
 a_n = 1;
 i = 2;
 while i<=n

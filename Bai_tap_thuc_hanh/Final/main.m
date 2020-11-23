@@ -4,9 +4,12 @@ close all
 format long
 
 %% Cau 1
-% % a
-% n = input('Nhap n de^, nhanh!: ');
-% dayso(n)
+% a
+% n = input('Nhap n = ', 's');
+% while isempty(n) || isnan(str2double(n)) || str2double(n) <= 0 || mod(str2double(n),1) ~= 0
+%    n = input('Nhap lai, n = ', 's'); 
+% end
+% dayso(str2double(n))
 % 
 % % kiem tra -------------------------------------------------------------
 % a = 1;
@@ -17,7 +20,7 @@ format long
 % ----------------------------------------------------------------------
 
 % % b, goi S la tong can tim
-% S = 1;
+% S = 0;
 % for n=2:5
 %     a_n = dayso(n);
 %     if mod(a_n, 2) == 0
@@ -40,6 +43,44 @@ format long
 % A = rref(A);
 % X = mat2str(A(:, end));
 % fprintf('He phuong trinh co nghiem [x;y;z;w] = %s\n', X);
+
+
+%% Cau 3
+% format long g
+% A = [(2/3)*pi pi/3; pi/6 (5/6)*pi]
+% matsin(A)
+
+%% Cau 4
+% syms u(t)
+% ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
+% cond = u(2) == 4; %condition
+% uSol(t) = dsolve(ode, cond) %solve system of differential equations
+% ezplot(uSol)
+% hold on
+% grid on
+% 
+% t_ = 0:4;
+% plot(t_, ones(size(t_)) * 10)
+% 
+% tSol = vpasolve(uSol == 10, t)
+% plot(tSol(1), 10, 'r*')
+% fprintf('Vay giao diem cua (C) va (d) la: (u; t) = (%d; %.4f)\n', 10, double(tSol(1)));
+
+%% Cau 5
+% format long
+% r=0.5;
+% i=0;
+% sum_new=0;
+% sum_old=-1;
+% while sum_new > sum_old
+%     sum_old = sum_new;
+%     sum_new = sum_new + r^i;
+%     i = i + 1;
+% end
+% sum_new
+
+
+
 
 %% Cau 3
 % format long g
@@ -64,21 +105,7 @@ format long
 % for k=1:10
 %     S = S + (-1)^k/factorial(2*k) * A^(2*k)
 % end
-%% Cau 4
-% syms u(t)
-% ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
-% cond = u(2) == 4; %condition
-% uSol(t) = dsolve(ode, cond) %solve system of differential equations
-% ezplot(uSol)
-% hold on
-% grid on
-% 
-% t_ = 0:4;
-% plot(t_, ones(size(t_)) * 10)
-% 
-% tSol = vpasolve(uSol == 10, t)
-% % test_sol = uSol(tSol(1))
-% plot(tSol(1), 10, 'r*')
+
 
 %% Cau 5
 % sum_old_output = fopen('sum_old.txt', 'w');
@@ -105,7 +132,3 @@ format long
 % end
 % fclose(fileID);
 % %------------------------------------------------------------------------
-
-
-
-
