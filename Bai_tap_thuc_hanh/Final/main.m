@@ -4,17 +4,17 @@ close all
 format long
 
 %% Cau 1
-% a
-n = input('Nhap n de^, nhanh!: ');
-dayso(n)
-
+% % a
+% n = input('Nhap n de^, nhanh!: ');
+% dayso(n)
+% 
 % % kiem tra -------------------------------------------------------------
 % a = 1;
 % for i=2:10
 %     disp(['5*' num2str(a)  ' - 3 = '  num2str(a*5 - 3)]);
 %     a = 5*a - 3;
 % end
-% % ----------------------------------------------------------------------
+% ----------------------------------------------------------------------
 
 % % b, goi S la tong can tim
 % S = 1;
@@ -34,7 +34,7 @@ dayso(n)
 % X = mat2str(A\B);
 % % https://matrixcalc.org/vi/#%7B%7B-2,-1,3,1%7D,%7B3,0,1,2%7D,%7B0,-4,-2,1%7D,%7B-1,3,1,0%7D%7D%5E%28-1%29%2a%7B%7B10%7D,%7B8%7D,%7B3%7D,%7B-7%7D%7D
 % fprintf('He phuong trinh co nghiem [x;y;z;w] = %s\n', X);
-
+% 
 % % C2
 % A = [-2 -1 3 1 10; 3 0 1 2 8; 0 -4 -2 1 3; -1 3 1 0 -7];
 % A = rref(A);
@@ -44,14 +44,26 @@ dayso(n)
 %% Cau 3
 % format long g
 % A = [(2/3)*pi pi/3; pi/6 (5/6)*pi];
+% A = [1 2 3; 4 5 6; 7 8 9];
 % matsin(A)
-% 
+% sinm(A)
+
 % % kiem tra ----------------------------------------------------------
 % S = A;
 % for k=1:11
 %     S = S + (-1) ^ k / factorial(2*k + 1) * A^(2*k + 1);
 % end
 % S
+
+% %----------------------------cos
+A = [0 1 1; 0 0 1; 0 0 0];
+matsin(A)^2 + matcos(A)^2
+sinm(A)
+cosm(A)
+% S = A^0;
+% for k=1:10
+%     S = S + (-1)^k/factorial(2*k) * A^(2*k)
+% end
 %% Cau 4
 % syms u(t)
 % ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
