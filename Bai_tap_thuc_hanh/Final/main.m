@@ -45,10 +45,10 @@ format long
 % format long g
 % A = [(2/3)*pi pi/3; pi/6 (5/6)*pi];
 % matsin(A)
-
+% 
 % % kiem tra ----------------------------------------------------------
 % S = A;
-% for k=1:8
+% for k=1:11
 %     S = S + (-1) ^ k / factorial(2*k + 1) * A^(2*k + 1);
 % end
 % S
@@ -60,10 +60,13 @@ format long
 % ezplot(uSol)
 % hold on
 % grid on
+% 
 % t_ = 0:4;
 % plot(t_, ones(size(t_)) * 10)
-
-
+% 
+% tSol = vpasolve(uSol == 10, t)
+% % test_sol = uSol(tSol(1))
+% plot(tSol(1), 10, 'r*')
 
 %% Cau 5
 % sum_old_output = fopen('sum_old.txt', 'w');
