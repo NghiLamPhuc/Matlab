@@ -4,9 +4,9 @@ close all
 format long
 
 %% Cau 1
-% % a
-% n = input('Nhap n de^, nhanh!: ');
-% dayso(n)
+% a
+n = input('Nhap n de^, nhanh!: ');
+dayso(n)
 
 % % kiem tra -------------------------------------------------------------
 % a = 1;
