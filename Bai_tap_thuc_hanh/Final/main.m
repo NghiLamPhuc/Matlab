@@ -4,12 +4,9 @@ close all
 format long
 
 %% Cau 1
-% a
-% n = input('Nhap n = ', 's');
-% while isempty(n) || isnan(str2double(n)) || str2double(n) <= 0 || mod(str2double(n),1) ~= 0
-%    n = input('Nhap lai, n = ', 's'); 
-% end
-% dayso(str2double(n))
+% % a
+% n = input('Nhap n = ');
+% fprintf('Gia tri a_n la: %s \n', num2str(dayso(n)));
 % 
 % % kiem tra -------------------------------------------------------------
 % a = 1;
@@ -24,16 +21,28 @@ format long
 % for n=2:5
 %     a_n = dayso(n);
 %     if mod(a_n, 2) == 0
-%         disp(num2str(a_n));
+%         fprintf('a_%d = %d \n', n, a_n);
 %         S = S + a_n;
 %     end
 % end
-% S
+% fprintf('Tong S = %d \n', S);
 
 %% Cau 2
 % % C1
-% A = [-2 -1 3 1; 3 0 1 2; 0 -4 -2 1; -1 3 1 0];
-% B = [10; 8; 3; -7];
+% A = [1 -2 -1 3;
+%      2 3 0 1;
+%      1 0 -4 -2;
+%      0 -1 3 1]; %     ma tr?n các h? s? c?a hpt
+% B = [10; 8; 3; -7]; % ma tr?n h? s? t? do c?a hpt
+% % det(A)
+% for j=1:4
+%     Aj = A;
+%     Aj(:,j) = B; % ma
+%                  %
+%     x(j) = det(Aj)/det(A);
+% end
+% fprintf('He phuong trinh co nghiem (w; x; y; z) = %s\n', mat2str(x));
+
 % X = mat2str(A\B);
 % % https://matrixcalc.org/vi/#%7B%7B-2,-1,3,1%7D,%7B3,0,1,2%7D,%7B0,-4,-2,1%7D,%7B-1,3,1,0%7D%7D%5E%28-1%29%2a%7B%7B10%7D,%7B8%7D,%7B3%7D,%7B-7%7D%7D
 % fprintf('He phuong trinh co nghiem [x;y;z;w] = %s\n', X);
@@ -48,23 +57,25 @@ format long
 %% Cau 3
 % format long g
 % A = [(2/3)*pi pi/3; pi/6 (5/6)*pi]
-% matsin(A)
+A = input('Nhap ma tran A bat ky: \n');
+matsin(A)
+
 
 %% Cau 4
-% syms u(t)
-% ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
-% cond = u(2) == 4; %condition
-% uSol(t) = dsolve(ode, cond) %solve system of differential equations
-% ezplot(uSol)
-% hold on
-% grid on
-% 
-% t_ = 0:4;
-% plot(t_, ones(size(t_)) * 10)
-% 
-% tSol = vpasolve(uSol == 10, t)
-% plot(tSol(1), 10, 'r*')
-% fprintf('Vay giao diem cua (C) va (d) la: (u; t) = (%d; %.4f)\n', 10, double(tSol(1)));
+syms u(t)
+ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
+cond = u(2) == 4; %condition
+uSol(t) = dsolve(ode, cond) %solve system of differential equations
+ezplot(uSol)
+hold on
+grid on
+
+t_ = 0:4;
+plot(t_, ones(size(t_)) * 10)
+
+tSol = vpasolve(uSol == 10, t)
+plot(tSol(1), 10, 'r*')
+fprintf('Vay giao diem cua (C) va (d) la: (u; t) = (%d; %.4f)\n', 10, double(tSol(1)));
 
 %% Cau 5
 % format long
