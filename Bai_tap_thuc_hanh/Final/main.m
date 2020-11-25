@@ -1,7 +1,7 @@
 clc
 clearvars
 close all
-format long
+% format long
 
 %% Cau 1
 % % a
@@ -57,25 +57,34 @@ format long
 %% Cau 3
 % format long g
 % A = [(2/3)*pi pi/3; pi/6 (5/6)*pi]
-A = input('Nhap ma tran A bat ky: \n');
-matsin(A)
+% A = input('Nhap ma tran A bat ky: \n');
+% matsin(A)
 
 
 %% Cau 4
-syms u(t)
-ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
-cond = u(2) == 4; %condition
-uSol(t) = dsolve(ode, cond) %solve system of differential equations
-ezplot(uSol)
-hold on
-grid on
+% % a
+% syms u(t)
+% ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
+% cond = u(2) == 4; %condition
+% uSol(t) = dsolve(ode, cond); %solve system of differential equations
+% disp('a--------------------------------------')
+% disp('Vay nghiem cua phuong trinh la');
+% disp(uSol)
+% disp('a--------------------------------------')
+% % b) uSolt(t) = t^3 - t^2
+% ezplot(uSol);
+% grid on
+% % c
+% disp('c--------------------------------------')
+% tSol = solve(uSol == 10, t)
+% tSol = single(tSol)
+% fprintf('Vay giao diem cua (C) va (d) la: (u; t) = (%d; %.4f)\n', 10, tSol(1));
+% disp('c--------------------------------------')
+% hold on
+% t_ = 0:4;
+% plot(t_, ones(size(t_)) * 10)
+% plot(tSol(1), 10, '*r')
 
-t_ = 0:4;
-plot(t_, ones(size(t_)) * 10)
-
-tSol = vpasolve(uSol == 10, t)
-plot(tSol(1), 10, 'r*')
-fprintf('Vay giao diem cua (C) va (d) la: (u; t) = (%d; %.4f)\n', 10, double(tSol(1)));
 
 %% Cau 5
 % format long
