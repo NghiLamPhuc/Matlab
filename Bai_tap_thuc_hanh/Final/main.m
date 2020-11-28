@@ -83,7 +83,7 @@ close all
 % fprintf('Vay giao diem cua (C) va (d) la: (u; t) = (%d; %.4f)\n', 10, tSol(1));
 % disp('c--------------------------------------')
 % hold on
-% t_ = 0:0.01:4;
+% t_ = 2:0.0000001:3;
 % plot(t_, ones(size(t_)) * 10)
 % plot(tSol(1), 10, '*r')
 
