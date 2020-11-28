@@ -28,7 +28,7 @@ close all
 % fprintf('Tong S = %d \n', S);
 
 %% Cau 2
-% % C1
+% % C crammer: be Quynh :))
 % A = [1 -2 -1 3;
 %      2 3 0 1;
 %      1 0 -4 -2;
@@ -43,6 +43,7 @@ close all
 % end
 % fprintf('He phuong trinh co nghiem (w; x; y; z) = %s\n', mat2str(x));
 
+% % C1
 % X = mat2str(A\B);
 % % https://matrixcalc.org/vi/#%7B%7B-2,-1,3,1%7D,%7B3,0,1,2%7D,%7B0,-4,-2,1%7D,%7B-1,3,1,0%7D%7D%5E%28-1%29%2a%7B%7B10%7D,%7B8%7D,%7B3%7D,%7B-7%7D%7D
 % fprintf('He phuong trinh co nghiem [x;y;z;w] = %s\n', X);
@@ -55,11 +56,12 @@ close all
 
 
 %% Cau 3
-% format long g
+% format long
 % A = [(2/3)*pi pi/3; pi/6 (5/6)*pi]
-% A = input('Nhap ma tran A bat ky: \n');
-% matsin(A)
-
+% % A = input('Nhap ma tran A bat ky: \n');
+% sA = matsin(A)
+% cA = matcos(A)
+% sA^2 + cA^2
 
 %% Cau 4
 % % a
@@ -81,7 +83,7 @@ close all
 % fprintf('Vay giao diem cua (C) va (d) la: (u; t) = (%d; %.4f)\n', 10, tSol(1));
 % disp('c--------------------------------------')
 % hold on
-% t_ = 0:4;
+% t_ = 0:0.01:4;
 % plot(t_, ones(size(t_)) * 10)
 % plot(tSol(1), 10, '*r')
 
