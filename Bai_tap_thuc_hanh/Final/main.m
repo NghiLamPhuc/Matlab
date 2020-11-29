@@ -28,20 +28,20 @@ close all
 % fprintf('Tong S = %d \n', S);
 
 %% Cau 2
-% C crammer: be Quynh :))
-A = [1 -2 -1 3;
-     2 3 0 1;
-     1 0 -4 -2;
-     0 -1 3 1]; %     ma tr?n các h? s? c?a hpt
-B = [10; 8; 3; -7]; % ma tr?n h? s? t? do c?a hpt
-% det(A)
-for j=1:4
-    Aj = A;
-    Aj(:,j) = B; % ma
-                 %
-    x(j) = det(Aj)/det(A);
-end
-fprintf('He phuong trinh co nghiem (w; x; y; z) = %s\n', mat2str(x));
+% % C crammer: be Quynh :))
+% A = [1 -2 -1 3;
+%      2 3 0 1;
+%      1 0 -4 -2;
+%      0 -1 3 1]; %     ma tr?n các h? s? c?a hpt
+% B = [10; 8; 3; -7]; % ma tr?n h? s? t? do c?a hpt
+% % det(A)
+% for j=1:4
+%     Aj = A;
+%     Aj(:,j) = B; % ma
+%                  %
+%     x(j) = det(Aj)/det(A);
+% end
+% fprintf('He phuong trinh co nghiem (w; x; y; z) = %s\n', mat2str(x));
 
 % % C1
 % X = mat2str(A\B);
