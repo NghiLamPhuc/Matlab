@@ -7,7 +7,7 @@ close all
 % % a
 % n = input('Nhap n = ');
 % fprintf('Gia tri a_n la: %s \n', num2str(dayso(n)));
-% 
+
 % % kiem tra -------------------------------------------------------------
 % a = 1;
 % for i=2:10
@@ -28,20 +28,20 @@ close all
 % fprintf('Tong S = %d \n', S);
 
 %% Cau 2
-% % C crammer: be Quynh :))
-% A = [1 -2 -1 3;
-%      2 3 0 1;
-%      1 0 -4 -2;
-%      0 -1 3 1]; %     ma tr?n các h? s? c?a hpt
-% B = [10; 8; 3; -7]; % ma tr?n h? s? t? do c?a hpt
-% % det(A)
-% for j=1:4
-%     Aj = A;
-%     Aj(:,j) = B; % ma
-%                  %
-%     x(j) = det(Aj)/det(A);
-% end
-% fprintf('He phuong trinh co nghiem (w; x; y; z) = %s\n', mat2str(x));
+% C crammer: be Quynh :))
+A = [1 -2 -1 3;
+     2 3 0 1;
+     1 0 -4 -2;
+     0 -1 3 1]; %     ma tr?n các h? s? c?a hpt
+B = [10; 8; 3; -7]; % ma tr?n h? s? t? do c?a hpt
+% det(A)
+for j=1:4
+    Aj = A;
+    Aj(:,j) = B; % ma
+                 %
+    x(j) = det(Aj)/det(A);
+end
+fprintf('He phuong trinh co nghiem (w; x; y; z) = %s\n', mat2str(x));
 
 % % C1
 % X = mat2str(A\B);
@@ -83,18 +83,24 @@ close all
 % fprintf('Vay giao diem cua (C) va (d) la: (u; t) = (%d; %.4f)\n', 10, tSol(1));
 % disp('c--------------------------------------')
 % hold on
-% t_ = 2:0.0000001:3;
+% t_ = linspace(-2*pi,2*pi);
+% % plot(t_, uSol(t_))
 % plot(t_, ones(size(t_)) * 10)
 % plot(tSol(1), 10, '*r')
+% subs(uSol, tSol(1))
 
 
 %% Cau 5
+
+% S = r^i + r^i + r^i + r^i .... 
+%         sum_old   =  sum_new
+
 % format long
 % r=0.5;
 % i=0;
 % sum_new=0;
 % sum_old=-1;
-% while sum_new > sum_old
+% while sum_new > sum_old    
 %     sum_old = sum_new;
 %     sum_new = sum_new + r^i;
 %     i = i + 1;
