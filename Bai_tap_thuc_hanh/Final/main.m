@@ -55,13 +55,13 @@ close all
 % fprintf('He phuong trinh co nghiem [x;y;z;w] = %s\n', X);
 
 
-%% Cau 3
-% format long
-% A = [(2/3)*pi pi/3; pi/6 (5/6)*pi]
-% % A = input('Nhap ma tran A bat ky: \n');
-% sA = matsin(A)
-% cA = matcos(A)
-% sA^2 + cA^2
+% % Cau 3
+format long
+A = [(2/3)*pi pi/3; pi/6 (5/6)*pi]
+% A = input('Nhap ma tran A bat ky: \n');
+sA = matsin(A)
+cA = matcos(A)
+sA^2 + cA^2
 
 %% Cau 4
 % % a
