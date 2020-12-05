@@ -55,6 +55,7 @@ format long
 % % b
 % syms x
 % y(x) = exp(-x)*sin(3*x);
+% % % kiem tra ket qua tich phan o tren
 % % fprintf('%.20f\n', double(int(y, [0 4])));
 % plot(xRange, y(xRange));
 % grid on
@@ -63,7 +64,7 @@ format long
 % plot(xRange, nguyenham(xRange));
 % xlabel('x')
 % ylabel('y')
-% legend('y = e^{-x}sin(3x)', 'nguyen ham cua y');
+% legend('y = e^{-x}sin(3x)', 'nguyen ham cua y');% nguyen ham???
 % title('Cau 3');
 
 %% Cau 4
@@ -86,20 +87,19 @@ format long
 % plot(xGiaoDiem, 2, 'or');
 
 %% Cau 5
-% format long
-format short
-a = 1.3;
-b = 8.7;
-N = 100;
-dx = (b - a)/N;
-A = 0;
-for x = linspace(a,b,101)
-    y = x^2 - sin(x);
-    A = A + y*dx;
-end
-A
-
-
-% x = linspace(1.3,8.7);
-% plot(x, x.^2-sin(x))
-% grid on
+% % format long
+% format short
+% a = 1.3;
+% b = 8.7;
+% N = 100;
+% dx = (b - a)/N;
+% A = 0;
+% for x = linspace(a,b,101)
+%     y = x^2 - sin(x);
+%     A = A + y*dx;
+% end
+% A
+% 
+% % De sai chang???
+% % A = sigma i=1..101 moi co ket qua voi deltax = (b - a)/100
+% % A = sigma i=1..(N + 1)

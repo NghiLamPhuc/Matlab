@@ -6,8 +6,8 @@ close all
 %% Cau 1.
 % % a
 % n = input('n = ');
-% fprintf('u_n = %d\n', dayso(n));
-
+% fprintf('u_n = %d\n\n', dayso(n));
+% 
 % % b
 % S = 0;
 % for n=2:5
@@ -46,8 +46,8 @@ close all
 % while abs(subs(f, x_n)) >= 10^(-8)
 %     n = n + 1;
 %     x_n = x_n - subs(f, x_n)/subs(diff(f, x), x_n);
-% %     fprintf('x_%d = %.9f\t', n, double(x_n));
-% %     fprintf('f(x) = %.9f\n', double(abs(subs(f, x_n))));
+% %     fprintf('x_%d = %.9f\t', n, double(x_n));            % kiem tra
+% %     fprintf('f(x) = %.9f\n', double(abs(subs(f, x_n)))); % kiem tra
 % end
 % fprintf('\nVay voi x_n ben duoi thi f(x) = 0\n')
 % x_n
@@ -57,10 +57,13 @@ close all
 %% Cau 4.
 % syms y(t)
 % eqn = diff(y, 2) + diff(y) == y + 2
-% cond1 = y(0) == 3;
-% cond2 = subs(diff(y), t, 0) == 0;
+% Dy = diff(y,t);
+% cond = [y(0) == 3, Dy(0) == 0];
 % % a
-% tSol(t) = dsolve(eqn, cond1, cond2)
+% tSol(t) = dsolve(eqn, cond)
+% pretty(tSol)
+% % % hoac viet truc tiep dsolve nhu ben duoi
+% % tSol(t) = dsolve('D2y + Dy = y + 2', 'y(0) = 3', 'Dy(0) = 0')
 % % pretty(tSol)
 % 
 % % b
@@ -75,12 +78,16 @@ close all
 % plot(nghiem, 3.01, 'or');
 
 %% Cau 5.
-% % format short
+% % format short % co the them vao de nhi`n
 % column = 1;
 % for goc=0:pi/10:2*pi
 %     D(1, column) = goc * 180 / pi;
 %     S(1, column) = cos(goc);
 %     column = column + 1;
 % end
-% D
-% S
+% D % 0  18   36   54 72 90 108 126 144 162 180 198 216 234 252 270 288 306 324 342 360
+% S % 1 0.95  0.8...
+
+% % the^m cho biet, de tinh cos cua 1 goc:
+% %                         - cos (radian)
+% %                         - cosd (degree)

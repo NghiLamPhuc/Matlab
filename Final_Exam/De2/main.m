@@ -15,7 +15,7 @@ format long
 % k
 % % % % kiemtra
 % % S = 0;
-% % for k=1:101
+% % for k=1:101 % co the thu voi k=100, 99...
 % %     S = S + k^2/(k^2+1);
 % % end
 % % S
@@ -48,12 +48,13 @@ format long
 % while abs(subs(f, x, x_n)) >= 10^(-10)
 %     n = n + 1;
 %     x_n = x_n - subs(f, x, x_n)/subs(diff(f, x), x, x_n);
-% %     fprintf('x_%d = %.15f\t', n, double(x_n));
-% %     fprintf('f(x) = %.20f\n', double(abs(subs(f, x, x_n))));
+% %     fprintf('x_%d = %.15f\t', n, double(x_n));        % kiem tra
+% %     fprintf('f(x) = %.20f\n', double(abs(subs(f, x, x_n)))); % kiem tra
 % end
 % fprintf('\nVay voi x_n ben duoi thi f(x) = 0\n');
 % x_n
 % double(x_n)
+
 %% Cau 4.
 % syms y(t)
 % eqn = diff(y, t) - 2*y/t == t^2*exp(t)
@@ -61,7 +62,7 @@ format long
 % % a
 % tSol(t) = dsolve(eqn, cond)
 % % b
-% t_ = linspace(0,3);
+% t_ = linspace(0,3); % linspace(a, b, c(optinal)): tao c so trong [a;b]. Neu k co c, tao 100 so
 % plot(t_, tSol(t_));% ezplot(tSol)
 % grid on;
 % xlabel('t');
@@ -71,6 +72,7 @@ format long
 % hold on;
 % plot(t_, ones(size(t_)) * 0.25);
 % plot(nghiem, 0.25, 'or');
+
 %% Cau 5.
 % n = 10000;
 % dem = zeros(1, 6);

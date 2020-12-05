@@ -28,12 +28,12 @@ close all
 % fprintf('Tong S = %d \n', S);
 
 %% Cau 2
-% % C crammer: be Quynh :))
 % A = [1 -2 -1 3;
 %      2 3 0 1;
 %      1 0 -4 -2;
-%      0 -1 3 1]; %     ma tr?n các h? s? c?a hpt
-% B = [10; 8; 3; -7]; % ma tr?n h? s? t? do c?a hpt
+%      0 -1 3 1]; %     ma tran các he so cua hpt
+% B = [10; 8; 3; -7]; % ma tran he so tu do cua hpt
+% % C crammer: be Quynh :)) ##########################################
 % % det(A)
 % for j=1:4
 %     Aj = A;
@@ -42,24 +42,24 @@ close all
 %     x(j) = det(Aj)/det(A);
 % end
 % fprintf('He phuong trinh co nghiem (w; x; y; z) = %s\n', mat2str(x));
-
-% % C1
-% X = mat2str(A\B);
-% % https://matrixcalc.org/vi/#%7B%7B-2,-1,3,1%7D,%7B3,0,1,2%7D,%7B0,-4,-2,1%7D,%7B-1,3,1,0%7D%7D%5E%28-1%29%2a%7B%7B10%7D,%7B8%7D,%7B3%7D,%7B-7%7D%7D
-% fprintf('He phuong trinh co nghiem [x;y;z;w] = %s\n', X);
 % 
-% % C2
+% % C1: ###########################################################
+% %  A*X = B => A^(-1)*A*X = A^(-1)*B
+% %                        co the ghi = A\B
+% X = A\B; %X = A^(-1)*B;
+% fprintf('He phuong trinh co nghiem [w;x;y;z] = %s\n', mat2str(X));
+% 
+% % C2: Gausssian ################################################
 % A = [-2 -1 3 1 10; 3 0 1 2 8; 0 -4 -2 1 3; -1 3 1 0 -7];
-% A = rref(A);
-% X = mat2str(A(:, end));
-% fprintf('He phuong trinh co nghiem [x;y;z;w] = %s\n', X);
-
+% A = rref(A); % ma tran bac thang
+% X = mat2str(A(:, end)); % mat2str: matrix to string: de hien thi cho dep  thoi, khong co gi.
+% fprintf('He phuong trinh co nghiem [w;x;y;z] = %s\n', X);
 
 %% Cau 3
-format long
-A = [(2/3)*pi pi/3; pi/6 (5/6)*pi]
-% A = input('Nhap ma tran A bat ky: \n');
-matsin(A)
+% format long
+% A = [(2/3)*pi pi/3; pi/6 (5/6)*pi]
+% % A = input('Nhap ma tran A bat ky: \n');
+% matsin(A)
 
 %% Cau 4
 % % a
@@ -92,7 +92,7 @@ matsin(A)
 
 % S = r^i + r^i + r^i + r^i .... 
 %         sum_old   =  sum_new
-
+% 
 % format long
 % r=0.5;
 % i=0;

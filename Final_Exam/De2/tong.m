@@ -7,13 +7,13 @@ function S = tong(n)
     S = 0;
     for i=3:n
         A = 0;
-        fprintf('%d*(', i);
+%         fprintf('%d*(', i);        % kiem tra
         for j=i-1:-1:1
             A = A + j;
-            fprintf('%d + ', j);
+%             fprintf('%d + ', j);   % kiem tra
         end
-        fprintf(')\n');
+%         fprintf(')\n');            % kiem tra
         S = S + i * A;
-        disp(num2str(S));
+%         disp(num2str(S));          % kiem tra
     end
 end
