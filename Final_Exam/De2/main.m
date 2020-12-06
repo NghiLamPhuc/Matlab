@@ -46,7 +46,7 @@ format long
 % x_n = 1;
 % n = 0;
 % while abs(subs(f, x, x_n)) >= 10^(-10)
-%     n = n + 1;
+%     n = n + 1; % xem chay bao nhieu lan, khong quan trong
 %     x_n = x_n - subs(f, x, x_n)/subs(diff(f, x), x, x_n);
 % %     fprintf('x_%d = %.15f\t', n, double(x_n));        % kiem tra
 % %     fprintf('f(x) = %.20f\n', double(abs(subs(f, x, x_n)))); % kiem tra

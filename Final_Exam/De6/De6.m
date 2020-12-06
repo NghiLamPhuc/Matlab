@@ -44,7 +44,7 @@ close all
 % x_n = 1;
 % n = 0;
 % while abs(subs(f, x_n)) >= 10^(-8)
-%     n = n + 1;
+%     n = n + 1; % de xem chay bao nhieu lan thoi, k qan trong
 %     x_n = x_n - subs(f, x_n)/subs(diff(f, x), x_n);
 % %     fprintf('x_%d = %.9f\t', n, double(x_n));            % kiem tra
 % %     fprintf('f(x) = %.9f\n', double(abs(subs(f, x_n)))); % kiem tra
