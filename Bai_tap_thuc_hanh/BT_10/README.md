@@ -2,7 +2,7 @@
 
 Ca 3-4 A504(đổi phòng A602_A610) 06/11/2020
 
-Link download: 
+Link download: https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/NghiLamPhuc/Matlab/tree/master/Bai_tap_thuc_hanh/BT_10/Code
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_10_1.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_1_a_b.JPG)
