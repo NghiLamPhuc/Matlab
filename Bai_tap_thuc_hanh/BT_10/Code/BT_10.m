@@ -249,27 +249,27 @@ format long
 % taylor(f, x, x0, 'order', n)
 
 %% bai tap 11
-syms x y
-f(x,y) = x - 3*y^2;
-
-a = 0; b = 2; c = 1; d = 2;
-m = 10; n = 10; % tu cho
-delta_x = (b - a)/m;    delta_y = (d - c)/n;
-delta_A = delta_x * delta_y;
-
-S = 0;
-for i = 1:m
-    x_mid = 0.5*(2*a + (2*i - 1)*delta_x);
-    for j = 1:n
-        y_mid = 0.5*(2*c + (2*j - 1)*delta_y);
-        S = S + double(subs(f, [x y], [x_mid y_mid])) * delta_A;
-%         S = S + subs(f, [x, y], [x_mid, y_mid]) * delta_A;
-    end
-end
-S
-% [x y] hoac [x, y] cung duoc.
-% double tinh ra xap xi => tinh toan nhanh hon subs
-% subs tinh ra chinh xac so ( do x y la symbolic) => tinh toan lau
-
-% kiem tra
-int(int(x-3*y^2, y, [1, 2]), x, [0, 2])
+% syms x y
+% f(x,y) = x - 3*y^2;
+% 
+% a = 0; b = 2; c = 1; d = 2;
+% m = 10; n = 10; % tu cho
+% delta_x = (b - a)/m;    delta_y = (d - c)/n;
+% delta_A = delta_x * delta_y;
+% 
+% S = 0;
+% for i = 1:m
+%     x_mid = 0.5*(2*a + (2*i - 1)*delta_x);
+%     for j = 1:n
+%         y_mid = 0.5*(2*c + (2*j - 1)*delta_y);
+%         S = S + double(subs(f, [x y], [x_mid y_mid])) * delta_A;
+% %         S = S + subs(f, [x, y], [x_mid, y_mid]) * delta_A;
+%     end
+% end
+% S
+% % [x y] hoac [x, y] cung duoc.
+% % double tinh ra xap xi => tinh toan nhanh hon subs
+% % subs tinh ra chinh xac so ( do x y la symbolic) => tinh toan lau
+% 
+% % kiem tra
+% int(int(x-3*y^2, y, [1, 2]), x, [0, 2])
