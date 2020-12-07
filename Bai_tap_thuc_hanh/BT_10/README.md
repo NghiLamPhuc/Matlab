@@ -59,17 +59,21 @@ Link download:
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_KQ_a.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_Dothi_a.JPG)
 
+
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_b.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_KQ_b.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_Dothi_b.JPG)
+
 
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_c.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_KQ_c.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_Dothi_c.JPG)
 
+
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_d.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_KQ_d.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_Dothi_d.JPG)
+
 
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_e.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_5_KQ_e.JPG)
@@ -89,17 +93,21 @@ Link download:
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_7_KQ_a.JPG)
 
 
+
 ![App](./HinhAnh/Debai_HinhAnh/BT_10_8.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_8_KQ.JPG)
+
 
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_10_9.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_9_KQ.JPG)
 
 
+
 ![App](./HinhAnh/Debai_HinhAnh/BT_10_10.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_10_func.JPG)
 ![App](./HinhAnh/BaiLam_HinhAnh/GBT_10_10_KQ.JPG)
+
 
 
 ![App](./HinhAnh/Debai_HinhAnh/BT_10_11.JPG)
