@@ -7,21 +7,25 @@ clearvars
 close all
 format long
 
+%% bai tap 1
+
+
 %% bai tap 2
-%a
+% %a
 % x = -2:0.1:2;
 % y = x;
 % [X, Y] = meshgrid(x, y);
 % a = X.^2.*Y.*exp(-X.^2-Y.^2);
 % mesh(a)
 
-%b khong biet
-% t = 0:0.1:5;
-% x = sin(4.*t);
-% y = cos(4.*t);
-% plot(x, y);
+% b khong biet
+t_ = 0:0.1:5;
+syms t
+x(t) = sin(4*t);
+y(t) = cos(4*t);
+plot(t_,x(t_))
 
-%c
+% %c
 % s = 0:0.1:2*pi;
 % t = -1:0.1:1;
 % [S, T] = meshgrid(s, t);
@@ -142,15 +146,15 @@ format long
 
 
 
-syms u(t)
-ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
-cond = u(2) == 4; %condition
-uSol(t) = dsolve(ode, cond) %solve system of differential equations
-ezplot(uSol)
-hold on
-grid on
-t_ = 0:4;
-plot(t_, ones(size(t_)) * 10)
+% syms u(t)
+% ode = t*diff(u,t) == t^2 + 3*u %ordinary differential equation
+% cond = u(2) == 4; %condition
+% uSol(t) = dsolve(ode, cond) %solve system of differential equations
+% ezplot(uSol)
+% hold on
+% grid on
+% t_ = 0:4;
+% plot(t_, ones(size(t_)) * 10)
 
 
 

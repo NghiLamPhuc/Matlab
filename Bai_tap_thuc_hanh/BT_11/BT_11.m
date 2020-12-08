@@ -7,20 +7,20 @@ clear all
 close all
 format long
 
-%% bai tap 1. bo a,d
-% https://www.mathworks.com/help/symbolic/symbolic-summation.html
+%% bai tap 1. bo a,d ------------------------------------------------------
+% % https://www.mathworks.com/help/symbolic/symbolic-summation.html
 % syms n
-% a = (n + 1)/(3*n-1);
-% X = subs(a, n, 1:5)
-% limit(a, n, inf)
-% 
-% b = cos((n*pi)/6);
-% X = subs(b, n, 1:5);
-% pretty(X)
+% b = (n + 1)/(3*n-1);
+% X = subs(b, n, 1:5)
 % limit(b, n, inf)
+
+% c = cos((n*pi)/6);
+% X = subs(c, n, 1:5);
+% pretty(X)
+% limit(c, n, inf)
 % https://www.symbolab.com/solver/limit-calculator/%5Clim_%7Bx%5Cto%5Cinfty%7D%5Cleft(cos%5Cleft(%5Cfrac%7B%5Cpi%20x%7D%7B6%7D%5Cright)%5Cright)
 
-%% bai tap 2
+%% bai tap 2---------------------------------------------------------------
 % syms x
 % fa = x^6 + x^4 - 3*x^3 - 16*x;
 % d1 = diff(fa); pretty(d1)
@@ -46,15 +46,15 @@ format long
 % double(subs(d1, 2))
 % double(subs(d2, 2))
 
-%% bai tap 3
+%% bai tap 3 1-------------------------------------------------------------
 % syms x
 % hArr = [0.2 0.1 0.01];
 % nArr = [1 2];
 % x0 = 2;
 % f = @(x) x^6 + x^4 - 3*x^3 - 16*x;
-% f = @(x) sqrt(x) + x^(1/3) + x^(3/2);
-% f = @(x) 2*x - 5*x^(3/4);
-% f = @(x) sin(x) + log(x) + 1/(x^2);
+% % f = @(x) sqrt(x) + x^(1/3) + x^(3/2);
+% % f = @(x) 2*x - 5*x^(3/4);
+% % f = @(x) sin(x) + log(x) + 1/(x^2);
 % for h=hArr
 %     disp(['h = ' num2str(h)])
 %     for n=nArr
@@ -63,54 +63,58 @@ format long
 %     end
 % end
 
-%% bai tap 4
+%% bai tap 3 2-------------------------------------------------------------
 % syms x
-% fa = @(x) log(abs(x - 2));
-% if limit(fa, x, 0) == subs(fa,0)
-%     disp('lien tuc')
-% else
-%     disp('khong lien tuc');
+% hArr = [0.2 0.1 0.01];
+% nArr = [1 2];
+% x0 = 2;
+% f(x) = x^6 + x^4 - 3*x^3 - 16*x;
+% % f(x) = sqrt(x) + x^(1/3) + x^(3/2);
+% % f(x) = 2*x - 5*x^(3/4);
+% % f(x) = sin(x) + log(x) + 1/(x^2);
+% for h=hArr
+%     disp(['h = ' num2str(h)])
+%     for n=nArr
+%         fprintf('Dao ham bac %d = ', n);
+%         disp(num2str(Xapxi_daoham_2(f, n, x0, h)));
+%     end
 % end
-% x = -2:2;
-% plot(x, log(abs(x - 2)))
 
-% syms x;
-% f = @(x) (x<0).*exp(x) + (x>=0).*x^2
-% if (limit(f, x, 0, 'left') == limit(f, x, 0, 'right'))
+%% bai tap 4---------------------------------------------------------------
+syms x
+% % a------------------------------------------------------------------------
+% a(x) = log(abs(x - 2))
+% l = limit(a, x, 2, 'left');
+% r = limit(a, x, 2, 'right');
+% if l==r
 %     disp('Lien tuc');
 % else
 %     disp('Khong lien tuc');
 % end
-% fplot(f, [-2, 2])
+% x_ = linspace(-1.5,2.5);
+% plot(x_, a(x_));
 
-% syms x
-% f1 = (x^2 - x)/(x^2 - 1);
-% f2 = 1;
-% f = feedback(f1, f2)
-% f = @(x) (x ~= 1) .* ((x^2 - x)/(x^2 - 1));
-%l = subs(f,1)
-% if (l == 1)
+% b------------------------------------------------------------------------
+% lf1 = limit(exp(x), x, 0, 'left')
+% lf2 = limit(x^2, x, 0, 'right')
+% f1(x) = exp(x); f2(x) = x^2;
+% x1_ = linspace(-2, 0);
+% x2_ = linspace(0, 2);
+% plot(x1_, f1(x1_));
+% hold on
+% plot(x2_, f2(x2_));
+
+% % c------------------------------------------------------------------------
+% c(x) = (x^2 - x)/(x^2 - 1);
+% limc = limit(c, x, 1)
+% if limc==1
 %     disp('Lien tuc');
 % else
 %     disp('Khong lien tuc');
 % end
-% fplot(f, [-2, 2])
+% ezplot(c)
 
-% c
-% syms x
-% limit((x^2-x)/(x^2-1),x,1)
-
-% fd = @(x) piecewise([x <= 0, cos(pi*x)], [x == 0, 0], [x > 0, 1 - x^2]);
-% if (limit(@(x) cos(pi*x), x, 0) == limit(@(x) 1 - x^2, x, 0))...
-%         && (limit(@(x) cos(pi*x), x, 0) == 0)
-%     disp('lien tuc');
-% else
-%     disp('khong lien tuc');
-% end
-% limit(@(x) cos(pi*x), x, 0)
-% limit(@(x) 1 - x^2, x, 0)
-
-%% bai tap 5 x=-2:0.01:2
+%% bai tap 5 x=-2:0.01:2---------------------------------------------------
 % x = -2:0.01:2;
 % plot(x, 1./(1+exp(1./x)))
 
@@ -118,9 +122,9 @@ format long
 % plot(x, log(tan(x).^2))
 
 %% bai tap 6
-% syms x h
-% limit(((x+h)*sin(1/(x+h)) - x*sin(1/x)) / h, h, 0)
-% limit( ((x+h)^2 * sin(1/(x+h)) - x^2*sin(1/x)) / h, h, 0)
+syms x h
+limit(((x+h)*sin(1/(x+h)) - x*sin(1/x)) / h, h, 0)
+limit( ((x+h)^2 * sin(1/(x+h)) - x^2*sin(1/x)) / h, h, 0)
 
 %% bai tap 7
 
