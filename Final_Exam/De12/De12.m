@@ -51,7 +51,7 @@ format long
 %     S = S + 0.5 * A * (B + C);
 % end
 % S
-% 
+
 % % b
 % syms x
 % y(x) = exp(-x)*sin(3*x);
@@ -66,6 +66,21 @@ format long
 % ylabel('y')
 % legend('y = e^{-x}sin(3x)', 'nguyen ham cua y');% nguyen ham???
 % title('Cau 3');
+
+% syms y(x);
+% S = 0;
+% y(x) = exp(-x)*sin(3*x);
+% N = 101;
+% x = linspace(0, 4, N);
+% for k=1:N-1
+%     S = S + 0.5 * (x(k+1) - x(k))*double(subs(y, x(k)) + subs(y, x(k+1)));
+% end
+% S
+% 
+% ezplot(y);
+% hold on;
+% ezplot(int(y));
+
 
 %% Cau 4
 % syms y(x)

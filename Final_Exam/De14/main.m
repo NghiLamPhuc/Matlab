@@ -87,7 +87,6 @@ close all
 % plot(tSol(1), 10, '*r')
 % subs(uSol, tSol(1))
 
-
 %% Cau 5
 
 % S = r^i + r^i + r^i + r^i .... 

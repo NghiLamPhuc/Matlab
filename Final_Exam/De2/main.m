@@ -22,11 +22,22 @@ format long
 % 
 % % b
 % tong(k)
+% % ------------------------------------------------------------- lam lai
+% S_n = 0; % tong S cho toi n;
+% n = 0;
+% while S_n<99
+%     n = n + 1;
+%     S_n = S_n + n^2/(n^2 + 1);
+% end
+% S_n
+% n
+% tong_2(n)
 
 %% Cau 2.
 % f = @(x) 10*x^3 - 5*x^2 - 4*x - sin(x)^4 - 2*cos(pi + x)^3;
 % % X = input('X = ');
-% X = [51 40; 32 39];
+% X = [51 40;
+%     32 39]
 % fX = f(X)
 % maxfX = fX(1);
 % for fx=fX
