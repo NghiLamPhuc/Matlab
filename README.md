@@ -10,6 +10,6 @@ Là cô đó... ㅋㅋㅋ
 
 ![App](./Picture/CoDTAThu.png)
 
-ㅋㅋㅋ
+Hướng dẫn ㅋㅋㅋ
 
 ![App](./Picture/CoGiaoVaSinhVien.jpg)
